@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Machel Montano — The Journey of a Soca King | Brooklyn Public Library Exhibition</title>
+  <meta name="description" content="A Brooklyn Public Library exhibition tracing the journey of Machel Montano, the King of Soca, from Trinidad to Brooklyn to the world. Aug 21 – Sep 11, 2026." />
+  <meta name="theme-color" content="#000000" />
+
+  <!-- TODO: replace this with the real domain once deployed -->
+  <link rel="canonical" href="https://kwamenasworld-cloud.github.io/king-of-soca/" />
+
+  <!-- Open Graph / social share -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Brooklyn Public Library" />
+  <meta property="og:title" content="Machel Montano — The Journey of a Soca King" />
+  <meta property="og:description" content="A Brooklyn Public Library exhibition tracing the King of Soca's journey from Trinidad to Brooklyn to the world. Aug 21 – Sep 11, 2026." />
+  <meta property="og:url" content="https://kwamenasworld-cloud.github.io/king-of-soca/" />
+  <meta property="og:image" content="https://kwamenasworld-cloud.github.io/king-of-soca/images/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Machel Montano — The Journey of a Soca King. Brooklyn Public Library Exhibition." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Machel Montano — The Journey of a Soca King" />
+  <meta name="twitter:description" content="A Brooklyn Public Library exhibition tracing the King of Soca's journey from Trinidad to Brooklyn to the world. Aug 21 – Sep 11, 2026." />
+  <meta name="twitter:image" content="https://kwamenasworld-cloud.github.io/king-of-soca/images/og-image.png" />
+
+  <!-- Icons -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 40'%3E%3Crect width='64' height='40' fill='%23000'/%3E%3Cpath d='M3 37 V15 L17 25 L25 8 L32 19 L39 8 L47 25 L61 15 V37 Z' fill='%23fff'/%3E%3Crect x='3' y='33' width='58' height='4' fill='%23fff'/%3E%3C/svg%3E" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ExhibitionEvent",
+    "name": "Machel Montano — The Journey of a Soca King",
+    "startDate": "2026-08-21",
+    "endDate": "2026-09-11",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "description": "A Brooklyn Public Library exhibition tracing the journey of Machel Montano, the King of Soca, from Trinidad to Brooklyn to the world.",
+    "image": "https://kwamenasworld-cloud.github.io/king-of-soca/images/og-image.png",
+    "location": {
+      "@type": "Place",
+      "name": "Brooklyn Public Library — Central Library",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "10 Grand Army Plaza",
+        "addressLocality": "Brooklyn",
+        "addressRegion": "NY",
+        "postalCode": "11238",
+        "addressCountry": "US"
+      }
+    },
+    "organizer": { "@type": "Organization", "name": "Brooklyn Public Library", "url": "https://www.bklynlibrary.org/" },
+    "performer": { "@type": "Person", "name": "Machel Montano" }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#top">Skip to content</a>
+
+  <!-- ============ SCROLL PROGRESS ============ -->
+  <div class="scroll-progress" aria-hidden="true"><span class="scroll-progress__bar"></span></div>
+
+  <!-- ============ HEADER / NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a class="nav__brand" href="#top" aria-label="Machel Montano — home">
+        <svg class="crown" viewBox="0 0 64 40" aria-hidden="true">
+          <path d="M3 37 V15 L17 25 L25 8 L32 19 L39 8 L47 25 L61 15 V37 Z" />
+          <rect x="3" y="33" width="58" height="4" />
+        </svg>
+        <span class="nav__wordmark">MACHEL<br>MONTANO</span>
+      </a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#journey" data-edit="nav.journey">The Journey</a>
+        <a href="#exhibition" data-edit="nav.exhibition">The Exhibition</a>
+        <a href="#visit" data-edit="nav.visit">Visit</a>
+        <a href="#programs" data-edit="nav.programs">Programs</a>
+        <a href="#support" data-edit="nav.support">Support</a>
+      </nav>
+
+      <a href="#visit" class="btn btn--primary nav__cta" data-edit="nav.cta">Plan Your Visit</a>
+
+      <button type="button" class="nav__burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Site menu" hidden>
+    <nav aria-label="Mobile">
+      <a href="#journey"><span class="eyebrow">01</span><span data-edit="nav.journey">The Journey</span></a>
+      <a href="#exhibition"><span class="eyebrow">02</span><span data-edit="nav.exhibition">The Exhibition</span></a>
+      <a href="#visit"><span class="eyebrow">03</span><span data-edit="nav.visit">Visit</span></a>
+      <a href="#programs"><span class="eyebrow">04</span><span data-edit="nav.programs">Programs</span></a>
+      <a href="#support"><span class="eyebrow">05</span><span data-edit="nav.support">Support</span></a>
+    </nav>
+    <a href="#visit" class="btn btn--primary" data-edit="nav.cta">Plan Your Visit</a>
+  </div>
+
+  <main id="top" tabindex="-1">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <div class="hero__wedge hero__wedge--tl" aria-hidden="true"></div>
+      <div class="hero__wedge hero__wedge--br" aria-hidden="true"></div>
+
+      <svg class="hero__route" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <path class="route-line" d="M-50 720 C 300 760, 460 540, 720 470 S 1180 300, 1500 150" />
+        <circle class="route-node" cx="180" cy="708" r="6" />
+        <circle class="route-node" cx="720" cy="470" r="8" />
+        <circle class="route-node" cx="1320" cy="208" r="6" />
+      </svg>
+
+      <div class="hero__inner">
+        <p class="eyebrow hero__eyebrow" data-reveal data-edit="hero.eyebrow">Brooklyn Public Library · Exhibition</p>
+        <h1 class="hero__title" data-reveal>
+          <span class="line" data-edit="hero.titleL1">The Journey</span>
+          <span class="line"><span data-edit="hero.titleL2">Of A </span><span class="accent" data-edit="hero.titleAccent">Soca King</span></span>
+        </h1>
+        <span class="rule rule--red" data-reveal></span>
+        <p class="hero__lede body-lg muted" data-reveal data-edit="hero.lede">[placeholder — one-line exhibition positioning statement]</p>
+
+        <div class="hero__meta" data-reveal>
+          <span class="pill" data-edit="hero.dates">Aug 21 — Sep 11, 2026</span>
+          <span class="hero__loc" data-edit="hero.location">Central Library · Little Caribbean Branches · Brooklyn, NYC</span>
+        </div>
+
+        <div class="hero__cta" data-reveal>
+          <a href="#visit" class="btn btn--primary" data-edit="hero.ctaPrimary">Plan Your Visit</a>
+          <a href="#journey" class="btn btn--ghost" data-edit="hero.ctaSecondary">Follow the Journey →</a>
+        </div>
+
+        <div class="hero__shores" data-reveal aria-hidden="true">
+          <span class="shore"><i></i>Trinidad</span>
+          <span class="shore-link"></span>
+          <span class="shore"><i></i>Brooklyn</span>
+          <span class="shore-link"></span>
+          <span class="shore"><i></i>The World</span>
+        </div>
+      </div>
+
+      <a href="#journey" class="hero__scroll" aria-label="Scroll to begin">
+        <span>Scroll</span>
+        <span class="hero__scroll-line"></span>
+      </a>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Trinidad <em>·</em> Brooklyn <em>·</em> The World <em>·</em> 44 Years <em>·</em> King of Soca <em>·</em></span>
+        <span>Trinidad <em>·</em> Brooklyn <em>·</em> The World <em>·</em> 44 Years <em>·</em> King of Soca <em>·</em></span>
+      </div>
+    </div>
+
+    <!-- ============ THE JOURNEY / THE BRIDGE ============ -->
+    <section class="section journey" id="journey">
+      <div class="container">
+        <header class="section-header section-header--center" data-reveal>
+          <p class="eyebrow" data-edit="journey.eyebrow">The Concept</p>
+          <h2 class="section-header__title"><span data-edit="journey.titleLead">One Bridge. </span><span class="accent" data-edit="journey.titleAccent">Three Shores.</span></h2>
+          <span class="rule rule--red"></span>
+          <p class="section-header__lede body-lg muted" data-edit="journey.lede">[placeholder — the bridge metaphor in one or two lines: Trinidad gives the gift, Brooklyn becomes the engine, the world opens]</p>
+        </header>
+      </div>
+
+      <!-- THE BRIDGE -->
+      <div class="bridge" data-reveal>
+        <div class="container">
+          <div class="bridge__wrap">
+            <div class="bridge__stage">
+              <svg class="bridge__svg" viewBox="0 60 1280 340" preserveAspectRatio="xMidYMid meet" role="img" aria-label="An illustration of the Brooklyn Bridge spanning from a house in Trinidad to a globe representing the world, with a marker that travels across it.">
+                <!-- roadway deck (the marker rides deckPath) -->
+                <path id="deckPath" class="bridge__deck" d="M48 372 H1232" />
+                <path class="bridge__deck bridge__deck--low" d="M48 380 H1232" />
+
+                <!-- main suspension cable: anchors into the deck, drapes over both towers -->
+                <path class="bridge__cable" d="M88 372 C230 250 340 120 440 80" />
+                <path class="bridge__cable" d="M440 80 C545 235 735 235 840 80" />
+                <path class="bridge__cable" d="M840 80 C940 120 1050 250 1192 372" />
+
+                <!-- vertical suspenders (cable -> deck) -->
+                <g class="bridge__suspenders">
+                  <line x1="150" y1="317" x2="150" y2="372"/>
+                  <line x1="214" y1="258" x2="214" y2="372"/>
+                  <line x1="278" y1="195" x2="278" y2="372"/>
+                  <line x1="342" y1="141" x2="342" y2="372"/>
+                  <line x1="406" y1="97"  x2="406" y2="372"/>
+                  <line x1="470" y1="117" x2="470" y2="372"/>
+                  <line x1="534" y1="167" x2="534" y2="372"/>
+                  <line x1="598" y1="192" x2="598" y2="372"/>
+                  <line x1="662" y1="195" x2="662" y2="372"/>
+                  <line x1="726" y1="178" x2="726" y2="372"/>
+                  <line x1="790" y1="135" x2="790" y2="372"/>
+                  <line x1="918" y1="125" x2="918" y2="372"/>
+                  <line x1="982" y1="180" x2="982" y2="372"/>
+                  <line x1="1046" y1="237" x2="1046" y2="372"/>
+                  <line x1="1110" y1="299" x2="1110" y2="372"/>
+                </g>
+
+                <!-- ORIGIN: house (Trinidad) -->
+                <g class="bridge__node bridge__node--trinidad">
+                  <path class="house-roof" d="M50 328 L88 300 L126 328 Z" />
+                  <rect class="house-body" x="60" y="326" width="56" height="46" />
+                  <rect class="house-door" x="80" y="348" width="16" height="24" />
+                  <rect class="house-win" x="100" y="334" width="9" height="9" />
+                </g>
+
+                <!-- THE SPAN: Brooklyn Bridge twin gothic towers -->
+                <g class="bridge__node bridge__node--brooklyn">
+                  <rect class="tower" x="414" y="80" width="52" height="292" />
+                  <path class="tower-arch" d="M420 372 L420 318 Q420 300 426 294 Q432 300 432 318 L432 372 Z" />
+                  <path class="tower-arch" d="M448 372 L448 318 Q448 300 454 294 Q460 300 460 318 L460 372 Z" />
+                  <rect class="tower" x="814" y="80" width="52" height="292" />
+                  <path class="tower-arch" d="M820 372 L820 318 Q820 300 826 294 Q832 300 832 318 L832 372 Z" />
+                  <path class="tower-arch" d="M848 372 L848 318 Q848 300 854 294 Q860 300 860 318 L860 372 Z" />
+                </g>
+
+                <!-- THE FAR SHORE: globe (the world) -->
+                <g class="bridge__node bridge__node--world">
+                  <circle class="globe" cx="1192" cy="342" r="30" />
+                  <ellipse class="globe-line" cx="1192" cy="342" rx="13" ry="30" />
+                  <line class="globe-line" x1="1162" y1="342" x2="1222" y2="342"/>
+                  <path class="globe-line" d="M1166 326 q26 11 52 0" />
+                  <path class="globe-line" d="M1166 358 q26 -11 52 0" />
+                </g>
+
+                <!-- traveling marker -->
+                <g class="bridge__traveler" transform="translate(88 372)">
+                  <circle class="traveler-pulse" r="16" />
+                  <circle class="traveler-dot" r="9" />
+                </g>
+              </svg>
+            </div>
+
+            <div class="bridge__controls" role="group" aria-label="Travel the bridge — Trinidad to Brooklyn to the world">
+              <button type="button" class="waypoint is-active" data-station="0" data-act="act-trinidad" aria-pressed="true" aria-label="Travel to Trinidad, the origin — go to Act I">
+                <span class="waypoint__index">01</span>
+                <span class="waypoint__eyebrow" data-edit="bridge.wp1Eyebrow">Origin</span>
+                <span class="waypoint__name" data-edit="bridge.wp1Name">Trinidad</span>
+              </button>
+              <button type="button" class="waypoint" data-station="1" data-act="act-brooklyn" aria-pressed="false" aria-label="Travel to Brooklyn, the span — go to Act II">
+                <span class="waypoint__index">02</span>
+                <span class="waypoint__eyebrow" data-edit="bridge.wp2Eyebrow">The Span</span>
+                <span class="waypoint__name" data-edit="bridge.wp2Name">Brooklyn</span>
+              </button>
+              <button type="button" class="waypoint" data-station="2" data-act="act-world" aria-pressed="false" aria-label="Travel to the world, the far shore — go to Act III">
+                <span class="waypoint__index">03</span>
+                <span class="waypoint__eyebrow" data-edit="bridge.wp3Eyebrow">The Far Shore</span>
+                <span class="waypoint__name" data-edit="bridge.wp3Name">The World</span>
+              </button>
+            </div>
+            <p class="sr-only" aria-live="polite" data-bridge-status></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ACT I — TRINIDAD ============ -->
+    <section class="section act act--dark" id="act-trinidad" data-rail-anchor="trinidad">
+      <span class="ghost-numeral" aria-hidden="true" data-parallax>01</span>
+      <div class="container act__grid">
+        <div class="act__copy">
+          <header class="section-header" data-reveal>
+            <p class="eyebrow" data-edit="actI.eyebrow">Act I · 1982 —</p>
+            <h2 class="section-header__title"><span data-edit="actI.titleLead">Born In </span><span class="accent" data-edit="actI.titleAccent">Trinidad</span></h2>
+            <span class="rule rule--red"></span>
+          </header>
+          <p class="body-lg muted" data-reveal data-edit="actI.body">[placeholder — where it all begins: a seven-year-old in Trinidad &amp; Tobago, the birthplace of soca and Carnival]</p>
+          <ul class="key-list" data-reveal>
+            <li><span class="key-list__head" data-edit="actI.k1Head">The Gift</span><span class="muted" data-edit="actI.k1Body">[placeholder]</span></li>
+            <li><span class="key-list__head" data-edit="actI.k2Head">Carnival Roots</span><span class="muted" data-edit="actI.k2Body">[placeholder]</span></li>
+            <li><span class="key-list__head" data-edit="actI.k3Head">The Sound of Soca</span><span class="muted" data-edit="actI.k3Body">[placeholder]</span></li>
+          </ul>
+        </div>
+        <div class="act__media" data-reveal>
+          <div class="media media--portrait media--redblock">
+            <span class="media__tag" data-edit="actI.mediaTag">Archive image — [placeholder]</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ACT II — BROOKLYN ============ -->
+    <section class="section act section--light" id="act-brooklyn" data-rail-anchor="brooklyn">
+      <span class="ghost-numeral ghost-numeral--light" aria-hidden="true" data-parallax>02</span>
+      <div class="container">
+        <header class="section-header" data-reveal>
+          <p class="eyebrow" data-edit="actII.eyebrow">Act II · The Engine</p>
+          <h2 class="section-header__title"><span data-edit="actII.titleLead">Brooklyn Builds </span><span class="accent" data-edit="actII.titleAccent">The Boss</span></h2>
+          <span class="rule rule--red"></span>
+          <p class="section-header__lede body-lg" data-reveal data-edit="actII.lede">[placeholder — Brooklyn, home to the largest Caribbean community outside the West Indies, becomes the engine of an international career]</p>
+        </header>
+
+        <h3 class="subhead" data-reveal data-edit="actII.subhead">Roots In Brooklyn</h3>
+        <!-- Roots timeline -->
+        <ol class="timeline" aria-label="Machel's roots in Brooklyn">
+          <li class="timeline__item" data-reveal>
+            <span class="timeline__year accent" data-edit="actII.t1Year">1984</span>
+            <div class="timeline__body"><h4 data-edit="actII.t1Title">Caribbean scholarship in Brooklyn</h4><p class="muted" data-edit="actII.t1Body">[placeholder]</p></div>
+          </li>
+          <li class="timeline__item" data-reveal>
+            <span class="timeline__year accent" data-edit="actII.t2Year">1997</span>
+            <div class="timeline__body"><h4 data-edit="actII.t2Title">First Road March, written in Brooklyn</h4><p class="muted" data-edit="actII.t2Body">[placeholder]</p></div>
+          </li>
+          <li class="timeline__item" data-reveal>
+            <span class="timeline__year accent" data-edit="actII.t3Year">2007</span>
+            <div class="timeline__body"><h4 data-edit="actII.t3Title">Sells out Madison Square Garden</h4><p class="muted" data-edit="actII.t3Body">[placeholder]</p></div>
+          </li>
+          <li class="timeline__item" data-reveal>
+            <span class="timeline__year accent" data-edit="actII.t4Year">2016</span>
+            <div class="timeline__body"><h4 data-edit="actII.t4Title">Bazodee premieres in Manhattan</h4><p class="muted" data-edit="actII.t4Body">[placeholder]</p></div>
+          </li>
+          <li class="timeline__item" data-reveal>
+            <span class="timeline__year accent" data-edit="actII.t5Year">2024</span>
+            <div class="timeline__body"><h4 data-edit="actII.t5Title">Keys to New York City</h4><p class="muted" data-edit="actII.t5Body">[placeholder]</p></div>
+          </li>
+          <li class="timeline__item" data-reveal>
+            <span class="timeline__year accent" data-edit="actII.t6Year">2026</span>
+            <div class="timeline__body"><h4 data-edit="actII.t6Title">Times Square to Brooklyn Public Library</h4><p class="muted" data-edit="actII.t6Body">[placeholder]</p></div>
+          </li>
+        </ol>
+
+        <aside class="callout" data-reveal data-edit="actII.callout">[placeholder] — the only soca artist to sell out Madison Square Garden, Radio City Music Hall, Kings Theatre, UBS Arena and the Barclays Center.</aside>
+      </div>
+    </section>
+
+    <!-- ============ ACT III — THE WORLD ============ -->
+    <section class="section act act--dark act--world" id="act-world" data-rail-anchor="world">
+      <span class="ghost-numeral" aria-hidden="true" data-parallax>03</span>
+      <div class="container">
+        <header class="section-header section-header--center" data-reveal>
+          <p class="eyebrow" data-edit="actIII.eyebrow">Act III · Global</p>
+          <h2 class="section-header__title"><span data-edit="actIII.titleLead">The World </span><span class="accent" data-edit="actIII.titleAccent">Opens</span></h2>
+          <span class="rule rule--red"></span>
+          <p class="section-header__lede body-lg muted" data-reveal data-edit="actIII.lede">[placeholder — from Brooklyn, the reach goes global]</p>
+        </header>
+
+        <div class="stats" data-reveal>
+          <div class="stat">
+            <span class="stat__rule"></span>
+            <span class="stat__figure" data-count="44" data-suffix="">44</span>
+            <span class="stat__label" data-edit="actIII.stat1Label">Years On The Road</span>
+          </div>
+          <div class="stat">
+            <span class="stat__rule"></span>
+            <span class="stat__figure" data-count="1.4" data-suffix="MM+" data-decimals="1">1.4MM+</span>
+            <span class="stat__label" data-edit="actIII.stat2Label">Audience Per Year</span>
+          </div>
+          <div class="stat">
+            <span class="stat__rule"></span>
+            <span class="stat__figure" data-count="12" data-suffix="×">12×</span>
+            <span class="stat__label" data-edit="actIII.stat3Label">Road March Titles</span>
+          </div>
+          <div class="stat">
+            <span class="stat__rule"></span>
+            <span class="stat__figure" data-count="45" data-suffix="">45</span>
+            <span class="stat__label" data-edit="actIII.stat4Label">Albums</span>
+          </div>
+        </div>
+        <p class="caption muted center" data-reveal data-edit="actIII.caption">[placeholder — note on figures / sources]</p>
+      </div>
+    </section>
+
+    <!-- ============ THE EXHIBITION ============ -->
+    <section class="section section--light exhibition" id="exhibition">
+      <div class="container">
+        <header class="section-header" data-reveal>
+          <p class="eyebrow" data-edit="exhibition.eyebrow">The Exhibition</p>
+          <h2 class="section-header__title"><span data-edit="exhibition.titleLead">The Journey, </span><span class="accent" data-edit="exhibition.titleAccent">On Display</span></h2>
+          <span class="rule rule--red"></span>
+          <p class="section-header__lede body-lg" data-reveal data-edit="exhibition.lede">[placeholder — a 40+ year archival collection, preserved by Elizabeth Montano, shown for the first time in Brooklyn]</p>
+        </header>
+
+        <h3 class="subhead" data-reveal data-edit="exhibition.subhead">Four Eras, One Story</h3>
+        <div class="cards cards--4">
+          <article class="era-card" data-reveal>
+            <span class="era-card__num">01</span>
+            <h4 data-edit="exhibition.era1Title">The Early Years</h4>
+            <p class="muted" data-edit="exhibition.era1Body">[placeholder]</p>
+          </article>
+          <article class="era-card" data-reveal>
+            <span class="era-card__num">02</span>
+            <h4 data-edit="exhibition.era2Title">The Winer Boy Years</h4>
+            <p class="muted" data-edit="exhibition.era2Body">[placeholder]</p>
+          </article>
+          <article class="era-card" data-reveal>
+            <span class="era-card__num">03</span>
+            <h4 data-edit="exhibition.era3Title">The HD Years</h4>
+            <p class="muted" data-edit="exhibition.era3Body">[placeholder]</p>
+          </article>
+          <article class="era-card" data-reveal>
+            <span class="era-card__num">04</span>
+            <h4 data-edit="exhibition.era4Title">The Monk Monte Years</h4>
+            <p class="muted" data-edit="exhibition.era4Body">[placeholder]</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ VISIT ============ -->
+    <section class="section visit" id="visit">
+      <span class="ghost-numeral" aria-hidden="true" data-parallax>04</span>
+      <div class="container">
+        <header class="section-header" data-reveal>
+          <p class="eyebrow" data-edit="visit.eyebrow">Plan Your Visit</p>
+          <h2 class="section-header__title"><span data-edit="visit.titleLead">Across </span><span class="accent" data-edit="visit.titleAccent">Brooklyn</span></h2>
+          <span class="rule rule--red"></span>
+        </header>
+
+        <div class="visit__lead" data-reveal>
+          <div class="visit__fact"><span class="eyebrow accent" data-edit="visit.fact1Label">Dates</span><p data-edit="visit.fact1Value">Aug 21 — Sep 11, 2026</p></div>
+          <div class="visit__fact"><span class="eyebrow accent" data-edit="visit.fact2Label">Anchor</span><p data-edit="visit.fact2Value">Brooklyn Public Library · Central Library</p></div>
+          <div class="visit__fact"><span class="eyebrow accent" data-edit="visit.fact3Label">Admission</span><p data-edit="visit.fact3Value">[placeholder]</p></div>
+        </div>
+
+        <h3 class="subhead" data-reveal data-edit="visit.subhead">Little Caribbean Branches</h3>
+        <div class="cards cards--branches">
+          <article class="branch-card" data-reveal><h4 data-edit="visit.b1Title">Flatbush</h4><p class="muted" data-edit="visit.b1Body">[placeholder]</p></article>
+          <article class="branch-card" data-reveal><h4 data-edit="visit.b2Title">Crown Heights</h4><p class="muted" data-edit="visit.b2Body">[placeholder]</p></article>
+          <article class="branch-card" data-reveal><h4 data-edit="visit.b3Title">Clarendon</h4><p class="muted" data-edit="visit.b3Body">[placeholder]</p></article>
+          <article class="branch-card" data-reveal><h4 data-edit="visit.b4Title">Rugby</h4><p class="muted" data-edit="visit.b4Body">[placeholder]</p></article>
+          <article class="branch-card" data-reveal><h4 data-edit="visit.b5Title">Brower Park</h4><p class="muted" data-edit="visit.b5Body">[placeholder]</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROGRAMS ============ -->
+    <section class="section section--light programs" id="programs">
+      <div class="container">
+        <header class="section-header" data-reveal>
+          <p class="eyebrow" data-edit="programs.eyebrow">Programs &amp; Events</p>
+          <h2 class="section-header__title"><span data-edit="programs.titleLead">More Than </span><span class="accent" data-edit="programs.titleAccent">An Exhibit</span></h2>
+          <span class="rule rule--red"></span>
+          <p class="section-header__lede body-lg" data-reveal data-edit="programs.lede">[placeholder — a borough-wide cultural and educational program]</p>
+        </header>
+
+        <div class="cards cards--3">
+          <article class="program-card" data-reveal><span class="program-card__bar"></span><h4 data-edit="programs.p1Title">Author Talks &amp; Conversations</h4><p class="muted" data-edit="programs.p1Body">[placeholder]</p></article>
+          <article class="program-card" data-reveal><span class="program-card__bar"></span><h4 data-edit="programs.p2Title">Documentary &amp; Film Screenings</h4><p class="muted" data-edit="programs.p2Body">[placeholder]</p></article>
+          <article class="program-card" data-reveal><span class="program-card__bar"></span><h4 data-edit="programs.p3Title">Vinyl Listening Station</h4><p class="muted" data-edit="programs.p3Body">[placeholder]</p></article>
+          <article class="program-card" data-reveal><span class="program-card__bar"></span><h4 data-edit="programs.p4Title">Soca-Fit &amp; Dance</h4><p class="muted" data-edit="programs.p4Body">[placeholder]</p></article>
+          <article class="program-card" data-reveal><span class="program-card__bar"></span><h4 data-edit="programs.p5Title">Youth &amp; Family Workshops</h4><p class="muted" data-edit="programs.p5Body">[placeholder]</p></article>
+          <article class="program-card" data-reveal><span class="program-card__bar"></span><h4 data-edit="programs.p6Title">Plaza Activations</h4><p class="muted" data-edit="programs.p6Body">[placeholder]</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SUPPORT ============ -->
+    <section class="section support" id="support">
+      <div class="container">
+        <header class="section-header" data-reveal>
+          <p class="eyebrow" data-edit="support.eyebrow">Support The Exhibition</p>
+          <h2 class="section-header__title"><span data-edit="support.titleLead">Become A </span><span class="accent" data-edit="support.titleAccent">Partner</span></h2>
+          <span class="rule rule--red"></span>
+          <p class="section-header__lede body-lg muted" data-reveal data-edit="support.lede">[placeholder — support Caribbean culture where Brooklyn lives it]</p>
+        </header>
+
+        <h3 class="subhead" data-reveal data-edit="support.subhead">Partnership Tiers</h3>
+        <div class="tiers">
+          <article class="tier tier--feature" data-reveal>
+            <span class="tier__rule"></span>
+            <span class="eyebrow accent" data-edit="support.t1Eyebrow">Title</span>
+            <h4 data-edit="support.t1Name">King of Soca Partner</h4>
+            <p class="tier__price" data-edit="support.t1Price">[placeholder]</p>
+            <p class="muted" data-edit="support.t1Body">[placeholder]</p>
+          </article>
+          <article class="tier" data-reveal><span class="eyebrow accent" data-edit="support.t2Eyebrow">Tier</span><h4 data-edit="support.t2Name">Power Soca Partner</h4><p class="tier__price" data-edit="support.t2Price">[placeholder]</p></article>
+          <article class="tier" data-reveal><span class="eyebrow accent" data-edit="support.t3Eyebrow">Tier</span><h4 data-edit="support.t3Name">Band of the Year Partner</h4><p class="tier__price" data-edit="support.t3Price">[placeholder]</p></article>
+          <article class="tier" data-reveal><span class="eyebrow accent" data-edit="support.t4Eyebrow">Tier</span><h4 data-edit="support.t4Name">Famalay Supporter</h4><p class="tier__price" data-edit="support.t4Price">[placeholder]</p></article>
+          <article class="tier" data-reveal><span class="eyebrow accent" data-edit="support.t5Eyebrow">Tier</span><h4 data-edit="support.t5Name">Pardy Friend</h4><p class="tier__price" data-edit="support.t5Price">[placeholder]</p></article>
+          <article class="tier" data-reveal><span class="eyebrow accent" data-edit="support.t6Eyebrow">Tier</span><h4 data-edit="support.t6Name">Community Champion</h4><p class="tier__price" data-edit="support.t6Price">[placeholder]</p></article>
+        </div>
+      </div>
+
+      <!-- CTA banner: red flip -->
+      <div class="cta" data-reveal>
+        <div class="container cta__inner">
+          <h3 class="cta__title" data-edit="cta.title">Stand Behind The Culture</h3>
+          <p data-edit="cta.body">[placeholder]</p>
+          <div class="cta__actions">
+            <a href="#support" class="btn btn--invert" data-edit="cta.btnPrimary">Become a Partner</a>
+            <a href="#visit" class="btn btn--ghost-light" data-edit="cta.btnSecondary">Plan Your Visit</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <svg class="crown crown--sm" viewBox="0 0 64 40" aria-hidden="true">
+          <path d="M3 37 V15 L17 25 L25 8 L32 19 L39 8 L47 25 L61 15 V37 Z" />
+          <rect x="3" y="33" width="58" height="4" />
+        </svg>
+        <p class="footer__wordmark"><span class="accent" data-edit="footer.wordmark">MACHEL MONTANO</span><span data-edit="footer.wordmarkTail"> · The Journey of a Soca King</span></p>
+        <p class="footer__tag muted" data-edit="footer.tag">[placeholder — short exhibition tagline]</p>
+      </div>
+
+      <div class="footer__col">
+        <span class="eyebrow" data-edit="footer.col1Head">Visit</span>
+        <a href="#visit" data-edit="footer.col1Link1">Plan Your Visit</a>
+        <a href="#exhibition" data-edit="footer.col1Link2">The Exhibition</a>
+        <a href="#programs" data-edit="footer.col1Link3">Programs &amp; Events</a>
+      </div>
+      <div class="footer__col">
+        <span class="eyebrow" data-edit="footer.col2Head">Partners</span>
+        <p class="muted" data-edit="footer.col2Line1">Machel Montano Foundation for Greatness</p>
+        <p class="muted" data-edit="footer.col2Line2">Brooklyn Public Library</p>
+      </div>
+      <div class="footer__col">
+        <span class="eyebrow" data-edit="footer.col3Head">Contact</span>
+        <p class="muted" data-edit="footer.col3Line1">[placeholder]</p>
+        <a href="#support" data-edit="footer.col3Link">Support &amp; Sponsorship</a>
+      </div>
+    </div>
+    <div class="container footer__base">
+      <span class="muted" data-edit="footer.copyright">© 2026 [placeholder]</span>
+      <span class="muted" data-edit="footer.baseRight">Aug 21 — Sep 11, 2026 · Brooklyn, NYC</span>
+    </div>
+  </footer>
+
+  <script src="js/content.js"></script>
+  <script src="js/edit.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
