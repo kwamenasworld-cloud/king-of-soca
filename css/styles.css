@@ -425,6 +425,15 @@ h4 { font-family: var(--font-body); font-weight: 700; font-size: var(--fs-h4); l
 .visit__lead { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); margin-bottom: var(--space-10); border-top: 1px solid var(--color-border-dark); padding-top: var(--space-6); }
 .visit__fact p { font-size: var(--fs-body-lg); margin-top: 4px; }
 
+/* dates & events schedule */
+.schedule__note { margin-bottom: 0; }
+.schedule { border-top: 1px solid var(--color-border-dark); margin: var(--space-4) 0 var(--space-5); }
+.schedule__item { display: grid; grid-template-columns: 168px 1fr; gap: var(--space-5); align-items: baseline;
+  padding: var(--space-5) 0; border-bottom: 1px solid var(--color-border-dark); }
+.schedule__date { font: 700 1.05rem/1.2 var(--font-body); letter-spacing: 0.02em; color: var(--color-accent-on-dark); }
+.schedule__body h4 { margin-bottom: 4px; }
+.schedule__tba { margin-bottom: var(--space-10); }
+
 /* ===================== SUPPORT / TIERS ===================== */
 .tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-5); }
 .tier { background: var(--color-surface); border: 1px solid var(--color-border-dark); border-radius: var(--radius-md); padding: var(--space-6);
@@ -499,6 +508,7 @@ h4 { font-family: var(--font-body); font-weight: 700; font-size: var(--fs-h4); l
   .traveler-pulse { r: 22px; }
   .timeline__item { grid-template-columns: 1fr; gap: var(--space-1); }
   .timeline__year { text-align: left; }
+  .schedule__item { grid-template-columns: 1fr; gap: var(--space-1); }
   .marquee__track span { font-size: 1.2rem; }
 }
 
