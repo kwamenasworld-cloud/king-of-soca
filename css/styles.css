@@ -153,6 +153,9 @@ h4 { font-family: var(--font-body); font-weight: 700; font-size: var(--fs-h4); l
 .section-header__lede { margin-top: var(--space-2); max-width: 60ch; }
 .section-header--center .section-header__lede { margin-inline: auto; }
 .subhead { font-size: var(--fs-h3); margin-bottom: var(--space-6); }
+/* breathing room when a subhead / note follows a grid (e.g. Before Social Media's two galleries) */
+.cards + .subhead { margin-top: var(--space-10); }
+.cards + .caption { margin-top: var(--space-8); }
 
 /* ===================== BUTTONS ===================== */
 .btn {
