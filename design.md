@@ -405,7 +405,8 @@ The universal block. Markup:
 Energetic but premium — quick, confident, never bouncy-cartoonish.
 
 - **Durations:** micro (hover/focus) `150–200ms`; entrances/reveals `400–600ms`; hero/large transitions `600–800ms`.
-- **Easing:** standard `cubic-bezier(0.2, 0.8, 0.2, 1)` (decelerate); exits `cubic-bezier(0.4, 0, 1, 1)`.
+- **Easing:** standard `cubic-bezier(0.2, 0.8, 0.2, 1)` (decelerate); exits `cubic-bezier(0.4, 0, 1, 1)`. For *youthful* card hovers use `--ease-spring` (a gentle overshoot) — kept subtle, premium not bouncy.
+- **Signature touches (subtle, premium):** card hovers lift with `--ease-spring`; red section rules draw in on reveal (`ruleGrow`); stat figures get a soft scale-bounce when revealed (`statPop`); the bridge marker leaves a faint lagging red trail (`.bridge__trail`, longer transition than the dot). All disabled under `prefers-reduced-motion`.
 - **Scroll-reveal:** fade + `translateY(24px→0)`, stagger children by `60–80ms`. Red rules animate `width 0→56px`. Stat figures count up on first view. Timeline dots scale-in `0→1`.
 - **Ghost numerals:** subtle parallax (slower scroll than foreground) for cinematic depth.
 - **Hero:** slow scrim/scale (Ken Burns ~`1.0→1.06` over 12s) optional; corner wedges can wipe in on load.
@@ -533,6 +534,7 @@ Mapping the deck's IA (Legacy → Impact → Brooklyn roots → Concept/Spaces �
   /* ============ MOTION ============ */
   --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
   --ease-in:  cubic-bezier(0.4, 0, 1, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1); /* gentle overshoot for youthful card hovers */
   --dur-micro: 180ms;
   --dur-reveal: 500ms;
   --dur-hero: 700ms;
