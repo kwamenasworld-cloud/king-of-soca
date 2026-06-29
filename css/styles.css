@@ -78,6 +78,7 @@
 
   --ease-out:cubic-bezier(0.2,0.8,0.2,1);
   --ease-in:cubic-bezier(0.4,0,1,1);
+  --ease-spring:cubic-bezier(0.34,1.56,0.64,1); /* gentle overshoot for youthful hovers */
   --dur-micro:180ms; --dur-reveal:600ms; --dur-hero:800ms;
 
   --rule-w:56px; --rule-w-sm:40px; --rule-h:4px; --tick-w:4px;
@@ -315,12 +316,13 @@ h4 { font-family: var(--font-body); font-weight: 700; font-size: var(--fs-h4); l
 .bridge__cable { stroke-dasharray: 720; stroke-dashoffset: 720; }
 .bridge.is-visible .bridge__cable { animation: drawCable 1.6s var(--ease-out) forwards; }
 @keyframes drawCable { to { stroke-dashoffset: 0; } }
-.bridge__suspenders, .bridge__node, .bridge__traveler { opacity: 0; }
+.bridge__suspenders, .bridge__node, .bridge__traveler, .bridge__trail { opacity: 0; }
 .bridge.is-visible .bridge__suspenders { animation: fadeIn .8s var(--ease-out) .9s forwards; }
 .bridge.is-visible .bridge__node--trinidad { animation: fadeIn .6s var(--ease-out) .2s forwards; }
 .bridge.is-visible .bridge__node--brooklyn { animation: fadeIn .6s var(--ease-out) .45s forwards; }
 .bridge.is-visible .bridge__node--world { animation: fadeIn .6s var(--ease-out) 1s forwards; }
-.bridge.is-visible .bridge__traveler { animation: fadeIn .5s var(--ease-out) 1.3s forwards; }
+.bridge.is-visible .bridge__traveler,
+.bridge.is-visible .bridge__trail { animation: fadeIn .5s var(--ease-out) 1.3s forwards; }
 @keyframes fadeIn { to { opacity: 1; } }
 
 /* waypoint buttons (right) */
@@ -394,7 +396,7 @@ h4 { font-family: var(--font-body); font-weight: 700; font-size: var(--fs-h4); l
 .cards--branches { grid-template-columns: repeat(5, 1fr); }
 
 .era-card { background: var(--color-surface); border: 1px solid var(--color-border-dark); border-radius: var(--radius-md); padding: var(--space-6);
-  transition: transform var(--dur-micro) var(--ease-out), border-color var(--dur-micro) var(--ease-out); }
+  transition: transform var(--dur-micro) var(--ease-spring), border-color var(--dur-micro) var(--ease-out); }
 .section--light .era-card { background: #fff; }
 .era-card:hover { transform: translateY(-4px); border-color: var(--color-accent); }
 .era-card__num { font-family: var(--font-display); font-size: 2rem; color: var(--color-accent); display: block; margin-bottom: var(--space-4); }
@@ -402,7 +404,7 @@ h4 { font-family: var(--font-body); font-weight: 700; font-size: var(--fs-h4); l
 
 .cards--artifacts { grid-template-columns: repeat(2, 1fr); }
 .artifact-card { background: #fff; border: 1px solid var(--color-border-light); border-radius: var(--radius-md); overflow: hidden;
-  transition: transform var(--dur-micro) var(--ease-out), box-shadow var(--dur-micro) var(--ease-out); }
+  transition: transform var(--dur-micro) var(--ease-spring), box-shadow var(--dur-micro) var(--ease-out); }
 .artifact-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-callout); }
 .artifact-card__media { aspect-ratio: 4 / 3; background: var(--color-surface-2); overflow: hidden; }
 .artifact-card__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -410,12 +412,12 @@ h4 { font-family: var(--font-body); font-weight: 700; font-size: var(--fs-h4); l
 .artifact-card h4 { margin-bottom: var(--space-2); }
 
 .branch-card { background: var(--color-surface); border: 1px solid var(--color-border-dark); border-top: 3px solid var(--color-accent);
-  border-radius: var(--radius-sm); padding: var(--space-5); transition: transform var(--dur-micro) var(--ease-out); }
+  border-radius: var(--radius-sm); padding: var(--space-5); transition: transform var(--dur-micro) var(--ease-spring); }
 .branch-card:hover { transform: translateY(-4px); }
 .branch-card h4 { margin-bottom: var(--space-2); }
 
 .program-card { background: #fff; border: 1px solid var(--color-border-light); border-radius: var(--radius-md); padding: var(--space-6);
-  transition: transform var(--dur-micro) var(--ease-out), box-shadow var(--dur-micro) var(--ease-out); }
+  transition: transform var(--dur-micro) var(--ease-spring), box-shadow var(--dur-micro) var(--ease-out); }
 .program-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-callout); }
 .program-card__bar { display: block; width: var(--rule-w-sm); height: var(--rule-h); background: var(--color-accent); margin-bottom: var(--space-4); }
 .program-card h4 { margin-bottom: var(--space-2); }
@@ -464,6 +466,41 @@ h4 { font-family: var(--font-body); font-weight: 700; font-size: var(--fs-h4); l
 .footer__col a:hover { color: var(--color-accent); }
 .footer__base { display: flex; justify-content: space-between; margin-top: var(--space-10); padding-top: var(--space-5); border-top: 1px solid var(--color-border-dark); font-size: var(--fs-caption); flex-wrap: wrap; gap: var(--space-2); }
 
+/* ===================== ROUND 2: WHY BROOKLYN / GALLERY / VOICES / TAKEAWAYS ===================== */
+.why__grid { display: grid; grid-template-columns: 1fr 0.82fr; gap: var(--space-10); align-items: center; }
+.why__imgwrap { position: relative; border-radius: var(--radius-sm); overflow: hidden; box-shadow: -18px 18px 0 var(--color-accent); }
+.why__imgwrap img { width: 100%; height: auto; display: block; }
+
+.media-card { background: var(--color-surface); border: 1px solid var(--color-border-dark); border-radius: var(--radius-md); overflow: hidden;
+  transition: transform var(--dur-micro) var(--ease-spring), border-color var(--dur-micro) var(--ease-out); }
+.media-card:hover { transform: translateY(-5px); border-color: var(--color-accent); }
+.media-card__thumb { aspect-ratio: 4 / 3; background: #000; overflow: hidden; }
+.media-card__thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.media-card__body { padding: var(--space-4) var(--space-5) var(--space-5); }
+.media-card h4 { margin-bottom: 4px; }
+
+.quote-card { position: relative; background: var(--color-surface); border: 1px solid var(--color-border-dark); border-radius: var(--radius-md); padding: var(--space-6); }
+.quote-card::before { content: "\201C"; position: absolute; top: 8px; left: 16px; font-family: var(--font-display); font-size: 3.5rem; line-height: 1; color: var(--color-accent); opacity: .4; }
+.quote-card blockquote { margin: var(--space-5) 0 var(--space-4); font-size: var(--fs-body-lg); line-height: 1.5; }
+.quote-card figcaption { display: flex; flex-direction: column; gap: 2px; }
+.quote-card__name { font-weight: 700; }
+.quote-card__role { font-size: var(--fs-small); }
+
+.takeaway { background: var(--color-blush); color: #000; border-radius: var(--radius-lg); padding: var(--space-6); box-shadow: var(--shadow-callout); }
+.takeaway h4 { margin-bottom: var(--space-2); }
+.takeaway p { color: #000; }
+
+/* traveling-dot trail (subtle premium motion) */
+.bridge__trail circle { fill: var(--color-accent); }
+.bridge__trail--1 { transition: transform 1.15s var(--ease-out); }
+.bridge__trail--1 circle { opacity: .28; }
+.bridge__trail--2 { transition: transform 1.45s var(--ease-out); }
+.bridge__trail--2 circle { opacity: .15; }
+
+/* stat figure soft bounce on reveal */
+.stats.is-visible .stat__figure { animation: statPop .6s var(--ease-spring) .15s both; }
+@keyframes statPop { 0% { transform: scale(.82); } 60% { transform: scale(1.06); } 100% { transform: scale(1); } }
+
 /* ===================== REVEAL ANIMATION ===================== */
 [data-reveal] { opacity: 0; transform: translateY(24px); transition: opacity var(--dur-reveal) var(--ease-out), transform var(--dur-reveal) var(--ease-out); }
 [data-reveal].is-visible { opacity: 1; transform: none; }
@@ -493,6 +530,8 @@ h4 { font-family: var(--font-body); font-weight: 700; font-size: var(--fs-h4); l
   .waypoint { flex: 1; padding: var(--space-3) var(--space-4); }
   .timeline__item { grid-template-columns: 80px 1fr; }
   .media--redblock { box-shadow: -12px 12px 0 var(--color-accent); }
+  .why__grid { grid-template-columns: 1fr; gap: var(--space-8); }
+  .why__imgwrap { box-shadow: -10px 10px 0 var(--color-accent); }
 }
 @media (max-width: 560px) {
   .hero__title { font-size: 13vw; }
@@ -518,7 +557,7 @@ h4 { font-family: var(--font-body); font-weight: 700; font-size: var(--fs-h4); l
   *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
   [data-reveal] { opacity: 1; transform: none; }
   .bridge__cable { stroke-dashoffset: 0; }
-  .bridge__suspenders, .bridge__node, .bridge__traveler { opacity: 1; }
+  .bridge__suspenders, .bridge__node, .bridge__traveler, .bridge__trail { opacity: 1; }
   .traveler-pulse { animation: none; opacity: .3; }
   .marquee__track { animation: none; }
   .hero__scroll-line { animation: none; }

@@ -134,12 +134,15 @@
     var stationLen = stationsX.map(lenAtX);
     var curIdx = 0;
     var statusEl = document.querySelector("[data-bridge-status]");
+    var trails = Array.prototype.slice.call(document.querySelectorAll(".bridge__trail"));
 
-    // Position the marker on the deck via a CSS transform (CSS transition handles
-    // the smooth glide across the bridge — robust without requestAnimationFrame).
+    // Position the marker (and its lagging trail) on the deck via a CSS transform;
+    // the CSS transition handles the smooth glide — robust without requestAnimationFrame.
     function setPos(len) {
       var p = deckPath.getPointAtLength(len);
-      traveler.style.transform = "translate(" + p.x.toFixed(1) + "px," + p.y.toFixed(1) + "px)";
+      var t = "translate(" + p.x.toFixed(1) + "px," + p.y.toFixed(1) + "px)";
+      traveler.style.transform = t;
+      trails.forEach(function (tr) { tr.style.transform = t; });
     }
     function setActive(idx) {
       waypoints.forEach(function (b, i) {
@@ -164,10 +167,12 @@
 
     // Place at the origin instantly (no glide on first paint), then enable transitions.
     traveler.style.transition = "none";
+    trails.forEach(function (tr) { tr.style.transition = "none"; });
     setPos(stationLen[0]);
     setActive(0);
     void traveler.getBoundingClientRect();
     traveler.style.transition = "";
+    trails.forEach(function (tr) { tr.style.transition = ""; });
 
     var userActed = false;
     // clicking a waypoint moves the marker AND scrolls to that Act
