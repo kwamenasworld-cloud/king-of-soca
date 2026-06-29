@@ -407,6 +407,7 @@ Energetic but premium — quick, confident, never bouncy-cartoonish.
 - **Durations:** micro (hover/focus) `150–200ms`; entrances/reveals `400–600ms`; hero/large transitions `600–800ms`.
 - **Easing:** standard `cubic-bezier(0.2, 0.8, 0.2, 1)` (decelerate); exits `cubic-bezier(0.4, 0, 1, 1)`. For *youthful* card hovers use `--ease-spring` (a gentle overshoot) — kept subtle, premium not bouncy.
 - **Signature touches (subtle, premium):** card hovers lift with `--ease-spring`; red section rules draw in on reveal (`ruleGrow`); stat figures get a soft scale-bounce when revealed (`statPop`); the bridge marker leaves a faint lagging red trail (`.bridge__trail`, longer transition than the dot). All disabled under `prefers-reduced-motion`.
+- **First-load intro (`.intro`):** a carnival "Big Truck" soundsystem (a nod to his 1997 Road March) drives across a black overlay **once per visitor** (localStorage `kos-truck-seen`; `?intro` replays). Skippable (click/Esc), CSS auto-dismiss fallback for no-JS, and fully suppressed under `prefers-reduced-motion` (decided in a `<head>` script via the `.no-intro` class to avoid any flash).
 - **Scroll-reveal:** fade + `translateY(24px→0)`, stagger children by `60–80ms`. Red rules animate `width 0→56px`. Stat figures count up on first view. Timeline dots scale-in `0→1`.
 - **Ghost numerals:** subtle parallax (slower scroll than foreground) for cinematic depth.
 - **Hero:** slow scrim/scale (Ken Burns ~`1.0→1.06` over 12s) optional; corner wedges can wipe in on load.

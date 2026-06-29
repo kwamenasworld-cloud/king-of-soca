@@ -566,6 +566,48 @@ h4 { font-family: var(--font-body); font-weight: 700; font-size: var(--fs-h4); l
   .hero__scroll-line { animation: none; }
 }
 
+/* ===================== FIRST-LOAD INTRO (carnival "Big Truck") ===================== */
+.intro {
+  position: fixed; inset: 0; z-index: 2000; background: #000; overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+  animation: introAuto 3.8s forwards; /* no-JS fallback: auto-dismiss */
+}
+html.no-intro .intro { display: none; }
+.intro--done { animation: introFade .45s ease forwards; }
+@keyframes introAuto { 0%, 82% { opacity: 1; visibility: visible; } 100% { opacity: 0; visibility: hidden; pointer-events: none; } }
+@keyframes introFade { to { opacity: 0; visibility: hidden; pointer-events: none; } }
+
+.intro__truck {
+  position: absolute; left: 0; top: 50%; width: min(640px, 84vw); height: auto;
+  transform: translateX(-70vw) translateY(-50%);
+  animation: truckDrive 3.1s cubic-bezier(0.45, 0.05, 0.5, 1) forwards;
+}
+@keyframes truckDrive {
+  from { transform: translateX(-70vw) translateY(-50%); }
+  to   { transform: translateX(122vw) translateY(-50%); }
+}
+.truck-bob { animation: truckBob .42s ease-in-out infinite; }
+@keyframes truckBob { 0%, 100% { transform: translateY(0); } 30% { transform: translateY(-5px); } 60% { transform: translateY(3px); } }
+.truck-wheel { transform-box: fill-box; transform-origin: 50% 50%; animation: wheelSpin .45s linear infinite; }
+@keyframes wheelSpin { to { transform: rotate(360deg); } }
+.truck-sound { animation: soundPulse 1s ease-in-out infinite; }
+@keyframes soundPulse { 0%, 100% { opacity: .3; } 50% { opacity: .7; } }
+.truck-label { font-family: var(--font-display); fill: #fff; font-size: 18px; letter-spacing: 1px; }
+
+.intro__confetti span { position: absolute; top: -8%; width: 9px; height: 14px; border-radius: 1px; opacity: .9; animation: confettiFall linear forwards; }
+@keyframes confettiFall { to { transform: translateY(118vh) rotate(560deg); } }
+
+.intro__caption {
+  position: absolute; bottom: 13%; left: 0; right: 0; text-align: center;
+  font: 700 var(--fs-small)/1 var(--font-body); letter-spacing: .14em; text-transform: uppercase; color: var(--color-text-muted);
+  opacity: 0; animation: introCap 3.1s ease forwards;
+}
+@keyframes introCap { 0% { opacity: 0; } 22% { opacity: 1; } 80% { opacity: 1; } 100% { opacity: 0; } }
+.intro__skip {
+  position: absolute; bottom: 22px; right: 24px; cursor: pointer;
+  font: 600 11px/1 var(--font-body); letter-spacing: .12em; text-transform: uppercase; color: var(--color-text-faint);
+}
+
 /* ===================== EDIT MODE (authoring only) ===================== */
 .edit-fab {
   position: fixed; right: 20px; bottom: 20px; z-index: 1200;

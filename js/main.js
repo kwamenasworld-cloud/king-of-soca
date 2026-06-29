@@ -5,6 +5,32 @@
 (function () {
   "use strict";
 
+  /* ---------- FIRST-LOAD "BIG TRUCK" INTRO ---------- */
+  (function intro() {
+    var el = document.querySelector(".intro");
+    if (!el) return;
+    // returning visitor / reduced-motion: the <head> script set .no-intro — just remove it
+    if (document.documentElement.classList.contains("no-intro")) {
+      if (el.parentNode) el.parentNode.removeChild(el);
+      return;
+    }
+    try { localStorage.setItem("kos-truck-seen", "1"); } catch (e) {}
+    document.body.style.overflow = "hidden";
+    var done = false;
+    function end() {
+      if (done) return;
+      done = true;
+      el.classList.add("intro--done");
+      document.body.style.overflow = "";
+      setTimeout(function () { if (el.parentNode) el.parentNode.removeChild(el); }, 500);
+    }
+    var timer = setTimeout(end, 3300);
+    el.addEventListener("click", function () { clearTimeout(timer); end(); });
+    document.addEventListener("keydown", function (e) {
+      if (!done && (e.key === "Escape" || e.key === "Enter" || e.key === " ")) { clearTimeout(timer); end(); }
+    });
+  })();
+
   var rmq = window.matchMedia("(prefers-reduced-motion: reduce)");
   var reduceMotion = rmq.matches;
   // keep the flag live if the user toggles the OS setting mid-session

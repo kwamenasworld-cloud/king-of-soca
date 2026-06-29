@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- decide before first paint whether to show the one-time "Big Truck" intro (no flash for returning visitors) -->
+  <script>try{var _s=localStorage.getItem('kos-truck-seen');var _f=/[?&]intro\b/.test(location.search);var _rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;if(_rm||(_s&&!_f))document.documentElement.classList.add('no-intro');}catch(e){}</script>
   <title>Machel Montano — The Journey of a Soca King | Brooklyn Public Library Exhibition</title>
   <meta name="description" content="A Brooklyn Public Library exhibition tracing the journey of Machel Montano, the King of Soca, from Trinidad and Tobago to Brooklyn to the world. Aug 21 – Sep 11, 2026." />
   <meta name="theme-color" content="#000000" />
@@ -65,6 +67,60 @@
 </head>
 <body>
   <a class="skip-link" href="#top">Skip to content</a>
+
+  <!-- First-load carnival "Big Truck" intro (plays once per visitor; ?intro to replay) -->
+  <div class="intro" aria-hidden="true">
+    <div class="intro__confetti">
+      <span style="left:6%;background:#E0241B;animation-duration:2.6s;animation-delay:0s"></span>
+      <span style="left:14%;background:#fff;animation-duration:2.2s;animation-delay:.25s"></span>
+      <span style="left:23%;background:#E0241B;animation-duration:2.9s;animation-delay:.1s"></span>
+      <span style="left:34%;background:#fff;animation-duration:2.4s;animation-delay:.4s"></span>
+      <span style="left:45%;background:#E0241B;animation-duration:2.7s;animation-delay:.15s"></span>
+      <span style="left:56%;background:#fff;animation-duration:2.5s;animation-delay:.3s"></span>
+      <span style="left:66%;background:#E0241B;animation-duration:3s;animation-delay:.05s"></span>
+      <span style="left:76%;background:#fff;animation-duration:2.3s;animation-delay:.35s"></span>
+      <span style="left:86%;background:#E0241B;animation-duration:2.8s;animation-delay:.2s"></span>
+      <span style="left:93%;background:#fff;animation-duration:2.6s;animation-delay:.45s"></span>
+    </div>
+
+    <svg class="intro__truck" viewBox="0 0 620 300" role="img" aria-label="A carnival big truck drives across the screen">
+      <g class="truck-bob">
+        <g class="truck-speed" stroke="#E0241B" stroke-width="3" stroke-linecap="round" opacity=".5">
+          <line x1="6" y1="118" x2="48" y2="118"/><line x1="0" y1="150" x2="42" y2="150"/><line x1="10" y1="182" x2="46" y2="182"/>
+        </g>
+        <g class="truck-sound" stroke="#E0241B" fill="none" stroke-width="3" stroke-linecap="round">
+          <path d="M50 88 q-16 19 0 38"/><path d="M36 80 q-22 25 0 52"/>
+        </g>
+        <line x1="0" y1="244" x2="620" y2="244" stroke="#1a1a1a" stroke-width="3"/>
+        <rect x="55" y="158" width="375" height="46" rx="4" fill="#141414" stroke="#2a2a2a" stroke-width="2"/>
+        <rect x="66" y="50" width="350" height="110" rx="6" fill="#0e0e0e" stroke="#2a2a2a" stroke-width="2"/>
+        <g>
+          <circle cx="116" cy="84" r="22" fill="#1c1c1c" stroke="#333" stroke-width="2"/><circle cx="116" cy="84" r="12" fill="#E0241B"/><circle cx="116" cy="84" r="4" fill="#fff"/>
+          <circle cx="196" cy="84" r="22" fill="#1c1c1c" stroke="#333" stroke-width="2"/><circle cx="196" cy="84" r="12" fill="#E0241B"/><circle cx="196" cy="84" r="4" fill="#fff"/>
+          <circle cx="276" cy="84" r="22" fill="#1c1c1c" stroke="#333" stroke-width="2"/><circle cx="276" cy="84" r="12" fill="#E0241B"/><circle cx="276" cy="84" r="4" fill="#fff"/>
+          <circle cx="356" cy="84" r="22" fill="#1c1c1c" stroke="#333" stroke-width="2"/><circle cx="356" cy="84" r="12" fill="#E0241B"/><circle cx="356" cy="84" r="4" fill="#fff"/>
+          <circle cx="116" cy="130" r="22" fill="#1c1c1c" stroke="#333" stroke-width="2"/><circle cx="116" cy="130" r="12" fill="#E0241B"/><circle cx="116" cy="130" r="4" fill="#fff"/>
+          <circle cx="196" cy="130" r="22" fill="#1c1c1c" stroke="#333" stroke-width="2"/><circle cx="196" cy="130" r="12" fill="#E0241B"/><circle cx="196" cy="130" r="4" fill="#fff"/>
+          <circle cx="276" cy="130" r="22" fill="#1c1c1c" stroke="#333" stroke-width="2"/><circle cx="276" cy="130" r="12" fill="#E0241B"/><circle cx="276" cy="130" r="4" fill="#fff"/>
+          <circle cx="356" cy="130" r="22" fill="#1c1c1c" stroke="#333" stroke-width="2"/><circle cx="356" cy="130" r="12" fill="#E0241B"/><circle cx="356" cy="130" r="4" fill="#fff"/>
+        </g>
+        <rect x="70" y="168" width="190" height="26" rx="3" fill="#E0241B"/>
+        <text x="165" y="187" text-anchor="middle" class="truck-label">BIG TRUCK</text>
+        <rect x="416" y="172" width="42" height="32" fill="#c81f17"/>
+        <path d="M452 204 L452 120 L470 120 L487 84 L544 84 L556 120 L566 120 L566 204 Z" fill="#E0241B"/>
+        <path d="M493 116 L502 92 L540 92 L549 116 Z" fill="#0E0E0E" stroke="#333"/>
+        <rect x="497" y="120" width="48" height="28" rx="2" fill="#0E0E0E"/>
+        <circle cx="563" cy="158" r="6" fill="#ffd27a"/>
+        <rect x="562" y="178" width="9" height="26" fill="#2a2a2a"/>
+        <g class="truck-wheel"><circle cx="150" cy="210" r="32" fill="#0d0d0d" stroke="#2a2a2a" stroke-width="3"/><circle cx="150" cy="210" r="15" fill="#1a1a1a" stroke="#444" stroke-width="2"/><circle cx="150" cy="210" r="6" fill="#E0241B"/></g>
+        <g class="truck-wheel"><circle cx="322" cy="210" r="32" fill="#0d0d0d" stroke="#2a2a2a" stroke-width="3"/><circle cx="322" cy="210" r="15" fill="#1a1a1a" stroke="#444" stroke-width="2"/><circle cx="322" cy="210" r="6" fill="#E0241B"/></g>
+        <g class="truck-wheel"><circle cx="512" cy="210" r="32" fill="#0d0d0d" stroke="#2a2a2a" stroke-width="3"/><circle cx="512" cy="210" r="15" fill="#1a1a1a" stroke="#444" stroke-width="2"/><circle cx="512" cy="210" r="6" fill="#E0241B"/></g>
+      </g>
+    </svg>
+
+    <p class="intro__caption">“Big Truck” · Road March · 1997</p>
+    <span class="intro__skip">click anywhere to skip</span>
+  </div>
 
   <!-- ============ SCROLL PROGRESS ============ -->
   <div class="scroll-progress" aria-hidden="true"><span class="scroll-progress__bar"></span></div>
