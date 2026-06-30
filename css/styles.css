@@ -569,6 +569,7 @@ h4 { font-family: var(--font-body); font-weight: 700; font-size: var(--fs-h4); l
 /* ===================== FIRST-LOAD INTRO (carnival "Big Truck") ===================== */
 .intro {
   position: fixed; inset: 0; z-index: 2000; overflow: hidden;
+  pointer-events: none; /* let the page scroll/click through while the intro plays */
   animation: introAuto 5s forwards; /* no-JS fallback: stop blocking after the wipe */
 }
 html.no-intro .intro { display: none; }
@@ -608,7 +609,7 @@ html.no-intro .intro { display: none; }
 @keyframes confettiFall { to { transform: translateY(118vh) rotate(560deg); } }
 
 .intro__skip {
-  position: absolute; bottom: 22px; right: 24px; cursor: pointer;
+  position: absolute; bottom: 22px; right: 24px; cursor: pointer; pointer-events: auto;
   font: 600 11px/1 var(--font-body); letter-spacing: .12em; text-transform: uppercase; color: var(--color-text-faint);
 }
 
