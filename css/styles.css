@@ -607,12 +607,6 @@ html.no-intro .intro { display: none; }
 .intro__confetti span { position: absolute; top: -8%; width: 9px; height: 14px; border-radius: 1px; opacity: .9; animation: confettiFall linear forwards; }
 @keyframes confettiFall { to { transform: translateY(118vh) rotate(560deg); } }
 
-.intro__caption {
-  position: absolute; bottom: 13%; left: 0; right: 0; text-align: center;
-  font: 700 var(--fs-small)/1 var(--font-body); letter-spacing: .14em; text-transform: uppercase; color: var(--color-text-muted);
-  opacity: 0; animation: introCap 4.4s ease forwards;
-}
-@keyframes introCap { 0% { opacity: 0; } 22% { opacity: 1; } 80% { opacity: 1; } 100% { opacity: 0; } }
 .intro__skip {
   position: absolute; bottom: 22px; right: 24px; cursor: pointer;
   font: 600 11px/1 var(--font-body); letter-spacing: .12em; text-transform: uppercase; color: var(--color-text-faint);
