@@ -598,7 +598,7 @@ html.no-intro .intro { display: none; }
 .truck-wheel { transform-box: fill-box; transform-origin: 50% 50%; animation: wheelSpin .4s linear infinite; }
 @keyframes wheelSpin { to { transform: rotate(360deg); } }
 /* bumping bass: rings pump out of the speakers */
-.truck-sound circle { fill: none; stroke: #E0241B; stroke-width: 5; transform-box: view-box; transform-origin: 60px 105px; opacity: 0; animation: swBump .7s ease-out infinite; }
+.truck-sound circle { fill: none; stroke: #E0241B; stroke-width: 5; transform-box: view-box; transform-origin: 240px 105px; opacity: 0; animation: swBump .7s ease-out infinite; }
 .truck-sound .sw-2 { animation-delay: .23s; }
 .truck-sound .sw-3 { animation-delay: .46s; }
 @keyframes swBump { 0% { transform: scale(.3); opacity: .95; } 100% { transform: scale(3.9); opacity: 0; } }
