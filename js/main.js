@@ -24,7 +24,7 @@
       document.body.style.overflow = "";
       setTimeout(function () { if (el.parentNode) el.parentNode.removeChild(el); }, 500);
     }
-    var timer = setTimeout(end, 3300);
+    var timer = setTimeout(end, 4600);
     el.addEventListener("click", function () { clearTimeout(timer); end(); });
     document.addEventListener("keydown", function (e) {
       if (!done && (e.key === "Escape" || e.key === "Enter" || e.key === " ")) { clearTimeout(timer); end(); }

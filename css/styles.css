@@ -569,7 +569,7 @@ h4 { font-family: var(--font-body); font-weight: 700; font-size: var(--fs-h4); l
 /* ===================== FIRST-LOAD INTRO (carnival "Big Truck") ===================== */
 .intro {
   position: fixed; inset: 0; z-index: 2000; overflow: hidden;
-  animation: introAuto 3.7s forwards; /* no-JS fallback: stop blocking after the wipe */
+  animation: introAuto 5s forwards; /* no-JS fallback: stop blocking after the wipe */
 }
 html.no-intro .intro { display: none; }
 .intro--done { animation: introFade .4s ease forwards; }
@@ -579,15 +579,15 @@ html.no-intro .intro { display: none; }
 /* black curtain the truck drags off to the right, revealing the page behind it */
 .intro__curtain {
   position: absolute; inset: 0; background: #000; transform: translateX(0);
-  animation: curtainWipe 3.1s cubic-bezier(0.5, 0.02, 0.5, 1) forwards;
+  animation: curtainWipe 4.4s cubic-bezier(0.45, 0.02, 0.5, 1) forwards;
 }
 @keyframes curtainWipe { from { transform: translateX(0); } to { transform: translateX(114vw); } }
 
 /* truck rides the curtain's leading edge (same motion), dragging the reveal */
 .intro__truck {
-  position: absolute; left: -52px; top: 50%; width: min(560px, 80vw); height: auto; z-index: 2;
+  position: absolute; left: -52px; top: 50%; width: min(560px, 80vw); height: auto; z-index: 2; overflow: visible;
   transform: translateX(0) translateY(-50%);
-  animation: truckDrive 3.1s cubic-bezier(0.5, 0.02, 0.5, 1) forwards;
+  animation: truckDrive 4.4s cubic-bezier(0.45, 0.02, 0.5, 1) forwards;
 }
 @keyframes truckDrive {
   from { transform: translateX(0) translateY(-50%); }
@@ -598,10 +598,10 @@ html.no-intro .intro { display: none; }
 .truck-wheel { transform-box: fill-box; transform-origin: 50% 50%; animation: wheelSpin .4s linear infinite; }
 @keyframes wheelSpin { to { transform: rotate(360deg); } }
 /* bumping bass: rings pump out of the speakers */
-.truck-sound circle { fill: none; stroke: #E0241B; stroke-width: 4; transform-box: view-box; transform-origin: 60px 105px; opacity: 0; animation: swBump .6s ease-out infinite; }
-.truck-sound .sw-2 { animation-delay: .2s; }
-.truck-sound .sw-3 { animation-delay: .4s; }
-@keyframes swBump { 0% { transform: scale(.35); opacity: .9; } 100% { transform: scale(2.6); opacity: 0; } }
+.truck-sound circle { fill: none; stroke: #E0241B; stroke-width: 5; transform-box: view-box; transform-origin: 60px 105px; opacity: 0; animation: swBump .7s ease-out infinite; }
+.truck-sound .sw-2 { animation-delay: .23s; }
+.truck-sound .sw-3 { animation-delay: .46s; }
+@keyframes swBump { 0% { transform: scale(.3); opacity: .95; } 100% { transform: scale(3.9); opacity: 0; } }
 .truck-label { font-family: var(--font-display); fill: #fff; font-size: 18px; letter-spacing: 1px; }
 
 .intro__confetti span { position: absolute; top: -8%; width: 9px; height: 14px; border-radius: 1px; opacity: .9; animation: confettiFall linear forwards; }
@@ -610,7 +610,7 @@ html.no-intro .intro { display: none; }
 .intro__caption {
   position: absolute; bottom: 13%; left: 0; right: 0; text-align: center;
   font: 700 var(--fs-small)/1 var(--font-body); letter-spacing: .14em; text-transform: uppercase; color: var(--color-text-muted);
-  opacity: 0; animation: introCap 3.1s ease forwards;
+  opacity: 0; animation: introCap 4.4s ease forwards;
 }
 @keyframes introCap { 0% { opacity: 0; } 22% { opacity: 1; } 80% { opacity: 1; } 100% { opacity: 0; } }
 .intro__skip {
