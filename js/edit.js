@@ -87,7 +87,7 @@
     if (!statusEl) return;
     if (msg) { statusEl.textContent = msg; return; }
     var n = changedCount();
-    statusEl.textContent = n ? (n + " field" + (n === 1 ? "" : "s") + " changed — Save to publish.") : DEFAULT_STATUS;
+    statusEl.textContent = n ? (n + " field" + (n === 1 ? "" : "s") + " changed. Save to publish.") : DEFAULT_STATUS;
   }
 
   var editing = false;
@@ -157,14 +157,14 @@
     a.href = url; a.download = "content.js";
     document.body.appendChild(a); a.click();
     setTimeout(function () { URL.revokeObjectURL(url); a.remove(); }, 100);
-    updateStatus("Downloaded content.js — drop it into the js/ folder to publish.");
+    updateStatus("Downloaded content.js. Drop it into the js/ folder to publish.");
   }
   function copyContent() {
     var text = fileBody();
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(text).then(function () { updateStatus("Copied content.js to clipboard."); },
-        function () { updateStatus("Copy failed — use Save → download instead."); });
-    } else { updateStatus("Clipboard unavailable — use Save → download."); }
+        function () { updateStatus("Copy failed. Use Save → download instead."); });
+    } else { updateStatus("Clipboard unavailable. Use Save → download."); }
   }
 
   fab.addEventListener("click", enter);

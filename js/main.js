@@ -182,7 +182,7 @@
         var ab = waypoints[idx];
         var nm = ab.querySelector(".waypoint__name");
         var ey = ab.querySelector(".waypoint__eyebrow");
-        statusEl.textContent = "Showing " + (nm ? nm.textContent : "") + " — " + (ey ? ey.textContent : "") + ".";
+        statusEl.textContent = "Showing " + (nm ? nm.textContent : "") + ", " + (ey ? ey.textContent : "") + ".";
       }
     }
     function moveTo(idx) {
