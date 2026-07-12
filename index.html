@@ -3,6 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- PRE-LAUNCH: site is password-gated; keep search engines out until launch (remove with the gate) -->
+  <meta name="robots" content="noindex" />
+  <!-- password gate: lock before first paint unless this browser has been unlocked -->
+  <script>try{if(localStorage.getItem('kos-unlock')!=='1')document.documentElement.classList.add('kos-locked');}catch(e){document.documentElement.classList.add('kos-locked');}</script>
+  <script src="js/gate.js?v=2" defer></script>
   <!-- decide before first paint whether to show the one-time "Big Truck" intro (no flash for returning visitors) -->
   <script>try{var _s=localStorage.getItem('kos-truck-seen');var _f=/[?&]intro\b/.test(location.search);var _rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;if(_rm||(_s&&!_f))document.documentElement.classList.add('no-intro');}catch(e){}</script>
   <title>Machel Montano: The Journey of a Soca King | Brooklyn Public Library Exhibition</title>
@@ -35,7 +40,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/styles.css?v=2" />
 
   <script type="application/ld+json">
   {
@@ -748,8 +753,8 @@
     </div>
   </footer>
 
-  <script src="js/content.js"></script>
-  <script src="js/edit.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/content.js?v=2"></script>
+  <script src="js/edit.js?v=2"></script>
+  <script src="js/main.js?v=2"></script>
 </body>
 </html>

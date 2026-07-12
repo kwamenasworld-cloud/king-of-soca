@@ -9,6 +9,12 @@
   (function intro() {
     var el = document.querySelector(".intro");
     if (!el) return;
+    // password gate is up: skip the intro WITHOUT marking it seen, so the
+    // truck plays on the first load after unlocking
+    if (document.documentElement.classList.contains("kos-locked")) {
+      if (el.parentNode) el.parentNode.removeChild(el);
+      return;
+    }
     // returning visitor / reduced-motion: the <head> script set .no-intro — just remove it
     if (document.documentElement.classList.contains("no-intro")) {
       if (el.parentNode) el.parentNode.removeChild(el);
