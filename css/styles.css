@@ -479,6 +479,8 @@ h4 { font-family: var(--font-body); font-weight: 700; font-size: var(--fs-h4); l
 .media-card:hover { transform: translateY(-5px); border-color: var(--color-accent); }
 .media-card__thumb { aspect-ratio: 4 / 3; background: #000; overflow: hidden; }
 .media-card__thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+/* press scans are portrait pages: show the whole page, letterboxed on black */
+.media-card__thumb--scan img { object-fit: contain; }
 .media-card__body { padding: var(--space-4) var(--space-5) var(--space-5); }
 .media-card h4 { margin-bottom: 4px; }
 
